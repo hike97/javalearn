@@ -1,0 +1,93 @@
+package com.atguigu.java8;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.LongPredicate;
+
+public class LambdaUsage {
+    /**
+     * 区分什么是funcitonalInterface
+     * 只有一个方法（非deafault方法）接口
+     * 可以用lambda表达式
+     */
+    @FunctionalInterface
+    public  interface  Adder{
+        int add(int a ,int b);
+    }
+
+    /**
+     * 非functionalInterface
+     * 继承了Adder 但拥有自己的方法 一共两个方法 所以非fuctional接口
+     */
+//    @FunctionalInterface
+//    public interface SmartAdder extends  Adder{
+//        int add(long a , long b);
+//    }
+
+    @FunctionalInterface
+    public interface Nothing_这也是接口 extends Adder{
+
+    }
+    /////////////////////////////////////////////////////////////////////////
+
+    /**
+     * Predicate 用法 传Object
+     * @param source
+     * @param predicate
+     * @return
+     */
+    private static List<Apple> filter(List<Apple> source, LambdaExpression.Predicate<Apple> predicate){
+        ArrayList<Apple> result = new ArrayList<>();
+        for (Apple apple : source) {
+            if (predicate.test( apple )){
+                result.add( apple );
+            }
+        }
+        return result;
+    }
+
+    /**
+     * LongPredicate 用法 传Long类型
+     * @param source
+     * @param predicate
+     * @return
+     */
+    private static List<Apple> filterByWeight(List<Apple> source, LongPredicate predicate){
+        ArrayList<Apple> result = new ArrayList<>();
+        for (Apple apple : source) {
+            if (predicate.test( apple.getWeight() )){
+                result.add( apple );
+            }
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        /*Runnable r1 = () -> System.out.println("Hello");
+        Runnable r2 = new Runnable() {
+
+            @Override
+            public void run() {
+                System.out.println( "Hello" );
+            }
+        };
+        process( r1 );
+        process( r2 );
+        process( ()-> System.out.println("Hello") );*/
+        List<Apple> list = Arrays.asList(
+                new Apple( "green", 150 ),
+                new Apple( "blue", 170 ),
+                new Apple( "green", 180 ),
+                new Apple( "yellow", 180 ));
+
+        List<Apple> green = filter( list, apple -> apple.getColor().equals( "green" ) );
+        System.out.println( green );
+
+        //longpredicte
+        List<Apple> result = filterByWeight( list, w -> w > 100 );
+        System.out.println( result );
+    }
+    public static void  process(Runnable r){
+        r.run();
+    }
+}
