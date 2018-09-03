@@ -3,8 +3,18 @@ package com.atguigu.java8;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.BiPredicate;
+import java.util.function.Consumer;
 import java.util.function.LongPredicate;
 
+/**
+ * 常用lambda表达式接口
+ * Predicate boolean test(T t);
+ * Consumer accept(T t);
+ * Function(T,R) R apply(T t);
+ * Supplier<T> T get();
+ */
 public class LambdaUsage {
     /**
      * 区分什么是funcitonalInterface
@@ -29,7 +39,7 @@ public class LambdaUsage {
     public interface Nothing_这也是接口 extends Adder{
 
     }
-    /////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
      * Predicate 用法 传Object
@@ -62,6 +72,42 @@ public class LambdaUsage {
         }
         return result;
     }
+
+    /**
+     * BIPredicate
+     * @param source
+     * @param predicate
+     * @return
+     */
+    private static List<Apple> filterByBiPredicate(List<Apple> source, BiPredicate<String,Integer> predicate){
+        ArrayList<Apple> result = new ArrayList<>();
+        for (Apple apple : source) {
+            if (predicate.test( apple.getColor(),apple.getWeight())){
+                result.add( apple );
+            }
+        }
+        return result;
+    }
+/////////////////////////////////////////////////////////////////////////////CONSUMER//////////////////////////////////////////////////////////
+    /**
+     * consumer 使用
+     * @param source
+     * @param consumer
+     */
+    private static void  simpleTestConsumer(List<Apple> source, Consumer<Apple> consumer) {
+        for (Apple apple : source) {
+           consumer.accept(apple);
+        }
+    }
+    private static void  simpleTestBIConsumer(String c, List<Apple> source, BiConsumer<Apple, String> consumer) {
+        for (Apple apple : source) {
+           consumer.accept(apple,c);
+        }
+    }
+////////////////////////////////////////////////////////////////////////////FUNCTION//////////////////////////////////////////////////////////
+    private static String  testFunction(Apple apple , LambdaExpression.Function<Apple,String> fun) {
+        return fun.apply( apple );
+    }
     public static void main(String[] args) {
         /*Runnable r1 = () -> System.out.println("Hello");
         Runnable r2 = new Runnable() {
@@ -81,11 +127,21 @@ public class LambdaUsage {
                 new Apple( "yellow", 180 ));
 
         List<Apple> green = filter( list, apple -> apple.getColor().equals( "green" ) );
-        System.out.println( green );
+        System.out.println( "predict查询_查询为绿色的apple:"+green );
 
         //longpredicte
         List<Apple> result = filterByWeight( list, w -> w > 100 );
-        System.out.println( result );
+        System.out.println( "predict查询_查询重量大于100的apple:"+result );
+
+        result = filterByBiPredicate( list, (s,w) -> s.equals( "green" ) && w > 100 );
+        System.out.println( "predict查询_查询绿色+重量大于100的apple:"+result );
+        System.out.println( "==========" );
+        simpleTestConsumer( list,apple -> System.out.println(apple) );
+        simpleTestBIConsumer( "XXX",list,(a,s)->
+                System.out.println(s + a.getColor() + ":weight=>"+a.getWeight()));
+
+        String yellow = testFunction( new Apple( "yellow", 100 ), apple -> apple.toString() );
+        System.out.println( "yellow:"+yellow );
     }
     public static void  process(Runnable r){
         r.run();
