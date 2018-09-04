@@ -1,12 +1,11 @@
 package com.atguigu.java8;
 
+import javafx.scene.effect.Blend;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.BiConsumer;
-import java.util.function.BiPredicate;
-import java.util.function.Consumer;
-import java.util.function.LongPredicate;
+import java.util.function.*;
 
 /**
  * 常用lambda表达式接口
@@ -104,10 +103,38 @@ public class LambdaUsage {
            consumer.accept(apple,c);
         }
     }
-////////////////////////////////////////////////////////////////////////////FUNCTION//////////////////////////////////////////////////////////
+// //////////////////////////////////
+// //FUNCTION////////////////////////
+// ////////////////////////////////
+
+    /**
+     * FUNCTION接口
+     * @param apple
+     * @param fun
+     * @return
+     */
     private static String  testFunction(Apple apple , LambdaExpression.Function<Apple,String> fun) {
         return fun.apply( apple );
     }
+
+    /**
+     * BiFunction
+     * @param color
+     * @param weight
+     * @param fun
+     * @return
+     */
+    private static Apple  testBiFunction(String color,Integer weight,BiFunction<String,Integer,Apple> fun) {
+        return fun.apply( color,weight );
+    }
+    /**
+     * Supplier TEST2
+     */
+    private static Apple createApple(Supplier<Apple> sup){
+        return sup.get();
+    }
+
+
     public static void main(String[] args) {
         /*Runnable r1 = () -> System.out.println("Hello");
         Runnable r2 = new Runnable() {
@@ -142,6 +169,27 @@ public class LambdaUsage {
 
         String yellow = testFunction( new Apple( "yellow", 100 ), apple -> apple.toString() );
         System.out.println( "yellow:"+yellow );
+        /**
+         * IntFunction
+         */
+        IntFunction<Double> f = i -> i* 100.0d;
+        double result4 = f.apply( 10 );
+        System.out.println( "IntFunction测试:"+result4 );
+        /**
+         *test_BiFunction
+         */
+        System.out.println( "TEST_BIFUNCTION>>>>>>>>>>>>>" );
+        Apple blue_apple = testBiFunction( "Blue", 130, (s, w) -> new Apple( s, w ) );
+        System.out.println( "BLUE_APPLE:"+blue_apple );
+        /**
+         * Supplier TEST
+         */
+        Supplier<String> s  = String::new; //method inference
+        System.out.println( "supplierTest>>>>>>>>>>>:"+s.get().getClass() );
+
+        Apple green_APPLE = createApple( () -> new Apple( "Green", 100 ) );
+        System.out.println( "绿苹果："+green_APPLE );
+
     }
     public static void  process(Runnable r){
         r.run();
