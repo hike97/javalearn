@@ -1,7 +1,6 @@
-package com.atguigu.java8_;
+package com.atguigu.java8_lambda;
 
 import org.junit.Test;
-import org.junit.internal.runners.statements.RunAfters;
 
 import java.util.*;
 import java.util.function.Consumer;

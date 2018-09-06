@@ -1,4 +1,4 @@
-package com.atguigu.java8_;
+package com.atguigu.java8_lambda;
 
 import com.atguigu.entity.Employee;
 import org.junit.Test;

@@ -14,7 +14,7 @@ public class Employee {
     private Integer age;
     private char gender;
     private double salary;
-
+    private Status status;
     public Employee() {
     }
 
@@ -32,5 +32,19 @@ public class Employee {
         this.age = age;
         this.gender = gender;
         this.salary = salary;
+    }
+
+    public Employee(String name, Integer age, char gender, double salary, Status status) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.salary = salary;
+        this.status = status;
+    }
+
+    public enum Status{
+        FREE,
+        BUSY,
+        VOCATION;
     }
 }

@@ -1,4 +1,4 @@
-package com.atguigu.java8_;
+package com.atguigu.java8_lambda;
 
 import com.atguigu.entity.Employee;
 import org.junit.Test;
@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.BiFunction;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 /**

@@ -1,4 +1,4 @@
-package com.atguigu.java8_;
+package com.atguigu.java8_lambda;
 
 /**
  * @author hike97
