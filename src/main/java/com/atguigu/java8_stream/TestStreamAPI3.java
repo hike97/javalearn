@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
  * @create 2018-09-06 19:29
  * @desc 终止操作
  **/
-public class StreamAPI3 {
+public class TestStreamAPI3 {
 
     List<Employee> employees = Arrays.asList(
             new Employee("张三",18,'男',9999.99,Employee.Status.FREE),
@@ -83,7 +83,7 @@ public class StreamAPI3 {
     }
     /*
         二.归约
-        reduce（T identity,BinaryOperator）
+        reduce（T identity,s）
         reduce(BiaryOperator)
         --可以将流中元素反复结合起来，得到一个值。
         map-reduce 方法 常用
@@ -129,5 +129,69 @@ public class StreamAPI3 {
         Optional<Employee> max_money = employees.stream().collect( Collectors.maxBy( (e1, e2) -> Double.compare( e1.getSalary(), e2.getSalary() )
         ) );
         System.out.println( "工资最大值:"+max_money.get() );
+
+        //工资最小值
+        Optional<Double> a_Double
+                = employees.stream().map( Employee::getSalary )
+                .collect( Collectors.minBy( Double::compare ) );
+        System.out.println( a_Double.get() );
+    }
+
+    /**
+     * 分组
+     */
+    @Test
+    public void test_6() {
+        Map<Employee.Status, List<Employee>> listMap
+                = employees.stream().collect( Collectors.groupingBy( Employee::getStatus ) );
+        System.out.println( listMap );
+    }
+    /**
+     * 多级分组
+     */
+    @Test
+    public void test_7() {
+        Map<Employee.Status, Map<String, List<Employee>>> map = employees.stream()
+                .collect( Collectors.groupingBy( Employee::getStatus
+                        , Collectors.groupingBy( e -> {
+                            if (e.getAge() <= 35) {
+                                return "青年";
+                            } else if (e.getAge() <= 50) {
+                                return "中年";
+                            } else {
+                                return "老年";
+                            }
+                        } ) ) );
+        System.out.println( map );
+    }
+    /**
+     * 分区
+     */
+    @Test
+    public void test_8() {
+        Map<Boolean, List<Employee>> collect = employees.stream().collect( Collectors.partitioningBy( e -> e.getSalary() > 8000 ) );
+        System.out.println( collect );
+    }
+    /**
+     * 收集
+     * collect --将刘转换为其他形式。接收一个Collector接口的实现，
+     * 用于给Stream中元素做汇总的方法
+     */
+    @Test
+    public void test_9() {
+        DoubleSummaryStatistics dss = employees.stream().collect( Collectors.summarizingDouble( Employee::getSalary ) );
+        System.out.println( "总数：" + dss.getSum() );
+        System.out.println( "平均数：" + dss.getAverage() );
+        System.out.println( "最大值：" + dss.getMax() );
+    }
+
+    /**
+     * 连接字符串
+     */
+    @Test
+    public void test_10() {
+        String s = employees.stream().map( Employee::getName )
+                .collect( Collectors.joining(",","<<<",">>>") );
+        System.out.println( "把名字连接起来："+s );
     }
 }
