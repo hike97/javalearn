@@ -27,6 +27,11 @@ public class TestReflection {
         //3.通过Class的静态方法获取
         Class<?> aClass = Class.forName( "com.atguigu.java_reflection.Person" );
         System.out.println( aClass );
+        //4.（了解）通过类加载器
+        ClassLoader classLoader = this.getClass().getClassLoader();
+        String className = "com.atguigu.java_reflection.Person";
+        Class<?> loadClass = classLoader.loadClass( className );
+        System.out.println( loadClass );
 
 
     }
