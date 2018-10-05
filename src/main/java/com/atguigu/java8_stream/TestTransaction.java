@@ -8,7 +8,6 @@ import java.util.stream.Stream;
 
 import com.atguigu.entity.Trader;
 import com.atguigu.entity.Transaction;
-import com.atguigu.java8.LambdaUsage;
 import org.junit.Before;
 import org.junit.Test;
 
