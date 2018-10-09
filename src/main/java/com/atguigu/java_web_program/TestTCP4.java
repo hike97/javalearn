@@ -1,4 +1,4 @@
-package com.atguigu.java_web;
+package com.atguigu.java_web_program;
 
 import org.junit.Test;
 
@@ -12,6 +12,7 @@ import java.net.Socket;
  * @create 2018-10-09 15:14
  * @desc socket练习
  **/
+//需求服务端读取一个文件发送给客户端并保存到本地
 public class TestTCP4 {
 	@Test
 	public void test_client () throws IOException {

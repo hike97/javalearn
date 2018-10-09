@@ -1,4 +1,4 @@
-package com.atguigu.java_web;
+package com.atguigu.java_web_program;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

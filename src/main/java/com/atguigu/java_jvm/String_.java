@@ -5,7 +5,7 @@ package com.atguigu.java_jvm;
  * @create 2018-09-20 19:48
  * @desc 类加载器的：双亲委派机制+沙箱机制（防止恶意代码对java的破坏）
  **/
-public class String {
+public class String_ {
     public static void main(String[] args) {
         /*
             首先将加载任务委托给父类加载器
