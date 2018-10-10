@@ -28,7 +28,7 @@ public class TestTCP5 {
 		System.out.println ("客户端读取完毕");
 		//服务器存储变换后的文件
 		InputStream is = socket.getInputStream ();
-		FileOutputStream fos = new FileOutputStream (new File ("heheda.txt"));
+		FileOutputStream fos = new FileOutputStream (new File ("hello.txt"));
 		byte[] bytes_ = new byte[1024];
 		int len_;
 		while ((len_=is.read (bytes_))!=-1){
