@@ -31,9 +31,9 @@ class Myinvokemethod implements InvocationHandler{
 	public Object invoke (final Object proxy, final Method method, final Object[] args) throws Throwable {
 		FridgeUtil util = new FridgeUtil ();
 		util.open ();
-		method.invoke (obj,args);
+		Object invoke = method.invoke (obj, args);
 		util.close ();
-		return null;
+		return invoke;
 	}
 }
 class HaierFridge implements Fridge{
