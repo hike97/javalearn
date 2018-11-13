@@ -60,7 +60,7 @@ public class TestStreamAPI3 {
         System.out.println( employee );
 
         //只要空闲 就加入
-        Optional<Employee> any = employees.stream().filter( e -> e.getStatus().equals( Employee.Status.FREE ) )
+        Optional<Employee> any = employees.stream().filter( e -> e.getStatus().equals( Employee.Status.FREE )&&e.getAge ()==1 )
                 .findAny();
         System.out.println( "随便找一个FREE的："+any.get() );
 
