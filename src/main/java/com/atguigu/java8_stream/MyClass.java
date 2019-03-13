@@ -1,6 +1,5 @@
 package com.atguigu.java8_stream;
 
-import sun.applet.Main;
 
 /**
  * @author hike97

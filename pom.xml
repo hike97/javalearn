@@ -31,5 +31,12 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+        <!--java11不支持javax.jws-->
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-ri</artifactId>
+            <version>2.3.0</version>
+            <type>pom</type>
+        </dependency>
     </dependencies>
 </project>
