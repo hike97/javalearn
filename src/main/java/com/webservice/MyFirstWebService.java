@@ -1,5 +1,6 @@
-package webservice;
+package com.webservice;
 
+import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 /**
@@ -9,4 +10,8 @@ import javax.jws.WebService;
  **/
 @WebService
 public class MyFirstWebService {
+	@WebMethod
+	public String sayHello(String name){
+		return "来啦"+name;
+	}
 }

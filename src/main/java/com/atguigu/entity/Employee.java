@@ -2,13 +2,17 @@ package com.atguigu.entity;
 
 import lombok.Data;
 
+import java.text.Collator;
+import java.util.Comparator;
+import java.util.Locale;
+
 /**
  * @author hike97
  * @create 2018-09-05 15:54
  * @desc employee实体类
  **/
 @Data
-public class Employee {
+public class Employee implements Comparator<Employee> {
 
     private String name ;
     private Integer age;
@@ -40,6 +44,12 @@ public class Employee {
         this.gender = gender;
         this.salary = salary;
         this.status = status;
+    }
+
+    @Override
+    public int compare (Employee o1, Employee o2) {
+        Collator instance = Collator.getInstance(Locale.CHINA);
+        return instance.compare(o1.getName (), o2.getName ());
     }
 
     public enum Status{

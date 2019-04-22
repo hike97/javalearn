@@ -1,0 +1,85 @@
+<TCRMContractComponentBObj>
+    <ContractComponentIdPK>2140392684</ContractComponentIdPK>
+    <ContractId>473127062288745882</ContractId>
+    <ContractStatusType>23</ContractStatusType>
+    <ContractStatusValue>有效</ContractStatusValue>
+    <PremiumAmount>275.000</PremiumAmount>
+    <ContractComponentType>1</ContractComponentType>
+    <ContractComponentValue>主险</ContractComponentValue>
+    <BaseIndicator>Y</BaseIndicator>
+    <ContractComponentLastUpdateDate>2011-07-02 02:37:59.0</ContractComponentLastUpdateDate>
+    <ContractComponentLastUpdateUser>MDM_ETL</ContractComponentLastUpdateUser>
+    <TCRMExtension>
+        <ExtendedObject>XContractComponentBObjExt</ExtendedObject>
+        <XContractComponentBObjExt>
+            <XProductCode>NWIP</XProductCode>
+            <XProductName>泰康e顺意外伤害保险</XProductName>
+            <XInsuredAmount>500000.00</XInsuredAmount>
+            <XUnderwriteInd10>1</XUnderwriteInd10>
+        </XContractComponentBObjExt>
+    </TCRMExtension>
+    <!-- 险种角色（可能多个） -->
+    <TCRMContractPartyRoleBObj>
+        <ContractRoleIdPK>2000408991</ContractRoleIdPK>
+        <PartyId>754130069032998294</PartyId>
+        <ContractComponentId>2140392684</ContractComponentId>
+        <RoleType>1</RoleType>
+        <!-- 客户在该险种的角色 -->
+        <RoleValue>投保人</RoleValue>
+        <StartDate>2010-05-18 17:27:45.0</StartDate>
+        <ContractPartyRoleLastUpdateDate>2011-03-21 14:52:10.0</ContractPartyRoleLastUpdateDate>
+        <ContractPartyRoleLastUpdateUser>BATCH_MERGE</ContractPartyRoleLastUpdateUser>
+        <ContractPartyRoleLastUpdateTxId>331130069032966270</ContractPartyRoleLastUpdateTxId>
+        <DWLStatus>
+            <Status>0</Status>
+        </DWLStatus>
+    </TCRMContractPartyRoleBObj>
+    <TCRMContractPartyRoleBObj>
+        <ContractRoleIdPK>2000409102</ContractRoleIdPK>
+        <PartyId>754130069032998294</PartyId>
+        <ContractComponentId>2140392684</ContractComponentId>
+        <RoleType>2</RoleType>
+        <RoleValue>被保人</RoleValue>
+        <StartDate>2010-05-18 17:27:45.0</StartDate>
+        <ContractPartyRoleLastUpdateDate>2011-03-21 14:52:10.0</ContractPartyRoleLastUpdateDate>
+        <ContractPartyRoleLastUpdateUser>BATCH_MERGE</ContractPartyRoleLastUpdateUser>
+        <ContractPartyRoleLastUpdateTxId>331130069032966270</ContractPartyRoleLastUpdateTxId>
+        <DWLStatus>
+            <Status>0</Status>
+        </DWLStatus>
+    </TCRMContractPartyRoleBObj>
+    <TCRMAdminNativeKeyBObj>
+        <AdminNativeKeyIdPK>1566078527</AdminNativeKeyIdPK>
+        <AdminContractId>405535620010100</AdminContractId>
+        <AdminFieldNameType>101</AdminFieldNameType>
+        <AdminFieldNameValue>个险保障计划编号</AdminFieldNameValue>
+        <AdminSystemType>101</AdminSystemType>
+        <AdminSystemValue>个险保障计划编号</AdminSystemValue>
+        <ContractId>2140392684</ContractId>
+        <ContractComponentIndicator>Y</ContractComponentIndicator>
+        <NativeKeyLastUpdateDate>2010-04-28 16:28:17.0</NativeKeyLastUpdateDate>
+        <DWLStatus>
+            <Status>0</Status>
+        </DWLStatus>
+    </TCRMAdminNativeKeyBObj>
+    <TCRMAdminNativeKeyBObj>
+        <AdminNativeKeyIdPK>314127062288750160</AdminNativeKeyIdPK>
+        <AdminContractId>21100390481247081</AdminContractId>
+        <AdminFieldNameType>105</AdminFieldNameType>
+        <AdminFieldNameValue>泰康在线保障计划编号</AdminFieldNameValue>
+        <AdminSystemType>105</AdminSystemType>
+        <AdminSystemValue>泰康在线保障计划编号</AdminSystemValue>
+        <ContractId>2140392684</ContractId>
+        <ContractComponentIndicator>Y</ContractComponentIndicator>
+        <NativeKeyLastUpdateDate>2010-04-07 14:48:07.0</NativeKeyLastUpdateDate>
+        <NativeKeyLastUpdateUser>TOLMQ</NativeKeyLastUpdateUser>
+        <NativeKeyLastUpdateTxId>535127062288719200</NativeKeyLastUpdateTxId>
+        <DWLStatus>
+            <Status>0</Status>
+        </DWLStatus>
+    </TCRMAdminNativeKeyBObj>
+    <ComponentID>1000435</ComponentID>
+    <DWLStatus>
+        <Status>0</Status>
+    </DWLStatus>
+</TCRMContractComponentBObj>

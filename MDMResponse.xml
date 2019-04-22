@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TCRMService  xmlns="http://www.ibm.com/mdm/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ibm.com/mdm/schema MDMDomains.xsd">
+    <ResponseControl>
+        <ResultCode>SUCCESS</ResultCode>
+        <ServiceTime>22249</ServiceTime>
+        <DWLControl>
+            <requesterName>TLIFE</requesterName>
+            <requesterLanguage>400</requesterLanguage>
+            <requesterLocale>zh</requesterLocale>
+            <requestID>20170418140322</requestID>
+        </DWLControl>
+    </ResponseControl>
+    <TxResponse>
+        <RequestType>getPartyWithContracts</RequestType>
+        <TxResult>
+            <ResultCode>SUCCESS</ResultCode>
+        </TxResult>
+        <ResponseObject>
+            <TCRMFSPartyBObj>
+                <!-- 保单信息（可能多个） -->
+                <TCRMContractBObj>
+                    <ContractIdPK>473127062288745882</ContractIdPK>
+                    <LineOfBusiness>CSC</LineOfBusiness>
+                    <CurrencyType>1</CurrencyType>
+                    <CurrencyValue>中国人民币元</CurrencyValue>
+                    <FrequencyModeType>1</FrequencyModeType>
+                    <FrequencyModeValue>每年</FrequencyModeValue>
+                    <BillingType>3</BillingType>
+                    <BillingValue>转账收费</BillingValue>
+                    <PremiumAmount>359.000</PremiumAmount>
+                    <NextBillingDate>2012-05-17 00:00:00.0</NextBillingDate>
+                    <ServiceOrgName>410</ServiceOrgName>
+                    <ServiceProvId>404009661</ServiceProvId>
+                    <BusOrgunitId>4</BusOrgunitId>
+                    <ContractLastUpdateDate>2011-07-02 01:25:17.0</ContractLastUpdateDate>
+                    <ContractLastUpdateUser>MDM_ETL</ContractLastUpdateUser>
+                    <ContractLastUpdateTxId>535127062288719200</ContractLastUpdateTxId>
+                    <!-- 保单名称 -->
+                    <AgreementName>泰康e顺意外伤害</AgreementName>
+                    <AgreementNickName>NWI</AgreementNickName>
+                    <SignedDate>2010-04-07 00:00:00.0</SignedDate>
+                    <!-- 生效日 -->
+                    <ExecutedDate>2010-05-17 00:00:00.0</ExecutedDate>
+                    <EndDate>2011-05-17 00:00:00.0</EndDate>
+                    <AgreementStatusType>23</AgreementStatusType>
+                    <AgreementStatusValue>有效</AgreementStatusValue>
+                    <TCRMExtension>
+                        <ExtendedObject>XContractBObjExt</ExtendedObject>
+                        <XContractBObjExt>
+                            <!-- 渠道 -->
+                            <XServiceFlag>NW</XServiceFlag>
+                            <XPostAddress>泰康金融大厦35层信息技术部</XPostAddress>
+                            <XPostCode>200120</XPostCode>
+                            <XMobile>13912345678</XMobile>
+                            <XPremValue01>359.00</XPremValue01>
+                        </XContractBObjExt>
+                    </TCRMExtension>
+                    <!-- 险种信息（可能多个） -->
+                    <TCRMContractComponentBObj>
+                        <ContractComponentIdPK>2140392684</ContractComponentIdPK>
+                        <ContractId>473127062288745882</ContractId>
+                        <ContractStatusType>23</ContractStatusType>
+                        <ContractStatusValue>有效</ContractStatusValue>
+                        <PremiumAmount>275.000</PremiumAmount>
+                        <ContractComponentType>1</ContractComponentType>
+                        <ContractComponentValue>主险</ContractComponentValue>
+                        <BaseIndicator>Y</BaseIndicator>
+                        <ContractComponentLastUpdateDate>2011-07-02 02:37:59.0</ContractComponentLastUpdateDate>
+                        <ContractComponentLastUpdateUser>MDM_ETL</ContractComponentLastUpdateUser>
+                        <TCRMExtension>
+                            <ExtendedObject>XContractComponentBObjExt</ExtendedObject>
+                            <XContractComponentBObjExt>
+                                <XProductCode>NWIP</XProductCode>
+                                <XProductName>泰康e顺意外伤害保险</XProductName>
+                                <XInsuredAmount>500000.00</XInsuredAmount>
+                                <XUnderwriteInd10>1</XUnderwriteInd10>
+                            </XContractComponentBObjExt>
+                        </TCRMExtension>
+                        <!-- 险种角色（可能多个） -->
+                        <TCRMContractPartyRoleBObj>
+                            <ContractRoleIdPK>2000408991</ContractRoleIdPK>
+                            <PartyId>754130069032998294</PartyId>
+                            <ContractComponentId>2140392684</ContractComponentId>
+                            <RoleType>1</RoleType>
+                            <!-- 客户在该险种的角色 -->
+                            <RoleValue>投保人</RoleValue>
+                            <StartDate>2010-05-18 17:27:45.0</StartDate>
+                            <ContractPartyRoleLastUpdateDate>2011-03-21 14:52:10.0</ContractPartyRoleLastUpdateDate>
+                            <ContractPartyRoleLastUpdateUser>BATCH_MERGE</ContractPartyRoleLastUpdateUser>
+                            <ContractPartyRoleLastUpdateTxId>331130069032966270</ContractPartyRoleLastUpdateTxId>
+                            <DWLStatus>
+                                <Status>0</Status>
+                            </DWLStatus>
+                        </TCRMContractPartyRoleBObj>
+                        <TCRMContractPartyRoleBObj>
+                            <ContractRoleIdPK>2000409102</ContractRoleIdPK>
+                            <PartyId>754130069032998294</PartyId>
+                            <ContractComponentId>2140392684</ContractComponentId>
+                            <RoleType>2</RoleType>
+                            <RoleValue>被保人</RoleValue>
+                            <StartDate>2010-05-18 17:27:45.0</StartDate>
+                            <ContractPartyRoleLastUpdateDate>2011-03-21 14:52:10.0</ContractPartyRoleLastUpdateDate>
+                            <ContractPartyRoleLastUpdateUser>BATCH_MERGE</ContractPartyRoleLastUpdateUser>
+                            <ContractPartyRoleLastUpdateTxId>331130069032966270</ContractPartyRoleLastUpdateTxId>
+                            <DWLStatus>
+                                <Status>0</Status>
+                            </DWLStatus>
+                        </TCRMContractPartyRoleBObj>
+                        <TCRMAdminNativeKeyBObj>
+                            <AdminNativeKeyIdPK>1566078527</AdminNativeKeyIdPK>
+                            <AdminContractId>405535620010100</AdminContractId>
+                            <AdminFieldNameType>101</AdminFieldNameType>
+                            <AdminFieldNameValue>个险保障计划编号</AdminFieldNameValue>
+                            <AdminSystemType>101</AdminSystemType>
+                            <AdminSystemValue>个险保障计划编号</AdminSystemValue>
+                            <ContractId>2140392684</ContractId>
+                            <ContractComponentIndicator>Y</ContractComponentIndicator>
+                            <NativeKeyLastUpdateDate>2010-04-28 16:28:17.0</NativeKeyLastUpdateDate>
+                            <DWLStatus>
+                                <Status>0</Status>
+                            </DWLStatus>
+                        </TCRMAdminNativeKeyBObj>
+                        <TCRMAdminNativeKeyBObj>
+                            <AdminNativeKeyIdPK>314127062288750160</AdminNativeKeyIdPK>
+                            <AdminContractId>21100390481247081</AdminContractId>
+                            <AdminFieldNameType>105</AdminFieldNameType>
+                            <AdminFieldNameValue>泰康在线保障计划编号</AdminFieldNameValue>
+                            <AdminSystemType>105</AdminSystemType>
+                            <AdminSystemValue>泰康在线保障计划编号</AdminSystemValue>
+                            <ContractId>2140392684</ContractId>
+                            <ContractComponentIndicator>Y</ContractComponentIndicator>
+                            <NativeKeyLastUpdateDate>2010-04-07 14:48:07.0</NativeKeyLastUpdateDate>
+                            <NativeKeyLastUpdateUser>TOLMQ</NativeKeyLastUpdateUser>
+                            <NativeKeyLastUpdateTxId>535127062288719200</NativeKeyLastUpdateTxId>
+                            <DWLStatus>
+                                <Status>0</Status>
+                            </DWLStatus>
+                        </TCRMAdminNativeKeyBObj>
+                        <ComponentID>1000435</ComponentID>
+                        <DWLStatus>
+                            <Status>0</Status>
+                        </DWLStatus>
+                    </TCRMContractComponentBObj>
+                    <TCRMContractComponentBObj>
+                        <ContractComponentIdPK>2140392686</ContractComponentIdPK>
+                        <ContractId>473127062288745882</ContractId>
+                        <ContractStatusType>23</ContractStatusType>
+                        <ContractStatusValue>有效</ContractStatusValue>
+                        <PremiumAmount>39.000</PremiumAmount>
+                        <ContractComponentType>2</ContractComponentType>
+                        <ContractComponentValue>附加险</ContractComponentValue>
+                        <ContractComponentLastUpdateDate>2011-07-02 02:37:58.0</ContractComponentLastUpdateDate>
+                        <ContractComponentLastUpdateUser>MDM_ETL</ContractComponentLastUpdateUser>
+                        <TCRMExtension>
+                            <ExtendedObject>XContractComponentBObjExt</ExtendedObject>
+                            <XContractComponentBObjExt>
+                                <XProductCode>RNWA</XProductCode>
+                                <XProductName>泰康附加e顺意外伤害医疗</XProductName>
+                                <XInsuredAmount>10000.00</XInsuredAmount>
+                                <XUnderwriteInd10>1</XUnderwriteInd10>
+                            </XContractComponentBObjExt>
+                        </TCRMExtension>
+                        <TCRMContractPartyRoleBObj>
+                            <ContractRoleIdPK>2000409104</ContractRoleIdPK>
+                            <PartyId>754130069032998294</PartyId>
+                            <ContractComponentId>2140392686</ContractComponentId>
+                            <RoleType>2</RoleType>
+                            <RoleValue>被保人</RoleValue>
+                            <StartDate>2010-05-18 17:27:45.0</StartDate>
+                            <ContractPartyRoleLastUpdateDate>2011-03-21 14:52:10.0</ContractPartyRoleLastUpdateDate>
+                            <ContractPartyRoleLastUpdateUser>BATCH_MERGE</ContractPartyRoleLastUpdateUser>
+                            <ContractPartyRoleLastUpdateTxId>331130069032966270</ContractPartyRoleLastUpdateTxId>
+                            <DWLStatus>
+                                <Status>0</Status>
+                            </DWLStatus>
+                        </TCRMContractPartyRoleBObj>
+                        <TCRMContractPartyRoleBObj>
+                            <ContractRoleIdPK>2000408993</ContractRoleIdPK>
+                            <PartyId>754130069032998294</PartyId>
+                            <ContractComponentId>2140392686</ContractComponentId>
+                            <RoleType>1</RoleType>
+                            <RoleValue>投保人</RoleValue>
+                            <StartDate>2010-05-18 17:27:45.0</StartDate>
+                            <ContractPartyRoleLastUpdateDate>2011-03-21 14:52:10.0</ContractPartyRoleLastUpdateDate>
+                            <ContractPartyRoleLastUpdateUser>BATCH_MERGE</ContractPartyRoleLastUpdateUser>
+                            <ContractPartyRoleLastUpdateTxId>331130069032966270</ContractPartyRoleLastUpdateTxId>
+                            <DWLStatus>
+                                <Status>0</Status>
+                            </DWLStatus>
+                        </TCRMContractPartyRoleBObj>
+                        <TCRMAdminNativeKeyBObj>
+                            <AdminNativeKeyIdPK>1566078529</AdminNativeKeyIdPK>
+                            <AdminContractId>405535620010101</AdminContractId>
+                            <AdminFieldNameType>101</AdminFieldNameType>
+                            <AdminFieldNameValue>个险保障计划编号</AdminFieldNameValue>
+                            <AdminSystemType>101</AdminSystemType>
+                            <AdminSystemValue>个险保障计划编号</AdminSystemValue>
+                            <ContractId>2140392686</ContractId>
+                            <ContractComponentIndicator>Y</ContractComponentIndicator>
+                            <NativeKeyLastUpdateDate>2010-04-28 16:28:17.0</NativeKeyLastUpdateDate>
+                            <DWLStatus>
+                                <Status>0</Status>
+                            </DWLStatus>
+                        </TCRMAdminNativeKeyBObj>
+                        <ComponentID>1000435</ComponentID>
+                        <DWLStatus>
+                            <Status>0</Status>
+                        </DWLStatus>
+                    </TCRMContractComponentBObj>
+                    <TCRMContractComponentBObj>
+                        <ContractComponentIdPK>2140392685</ContractComponentIdPK>
+                        <ContractId>473127062288745882</ContractId>
+                        <ContractStatusType>23</ContractStatusType>
+                        <ContractStatusValue>有效</ContractStatusValue>
+                        <PremiumAmount>45.000</PremiumAmount>
+                        <ContractComponentType>2</ContractComponentType>
+                        <ContractComponentValue>附加险</ContractComponentValue>
+                        <ContractComponentLastUpdateDate>2011-07-02 02:38:08.0</ContractComponentLastUpdateDate>
+                        <ContractComponentLastUpdateUser>MDM_ETL</ContractComponentLastUpdateUser>
+                        <TCRMExtension>
+                            <ExtendedObject>XContractComponentBObjExt</ExtendedObject>
+                            <XContractComponentBObjExt>
+                                <XProductCode>RNWB</XProductCode>
+                                <XProductName>泰康附加e顺意外住院津贴</XProductName>
+                                <XInsuredAmount>100.00</XInsuredAmount>
+                                <XUnderwriteInd10>1</XUnderwriteInd10>
+                            </XContractComponentBObjExt>
+                        </TCRMExtension>
+                        <TCRMContractPartyRoleBObj>
+                            <ContractRoleIdPK>2000409103</ContractRoleIdPK>
+                            <PartyId>754130069032998294</PartyId>
+                            <ContractComponentId>2140392685</ContractComponentId>
+                            <RoleType>2</RoleType>
+                            <RoleValue>被保人</RoleValue>
+                            <StartDate>2010-05-18 17:27:45.0</StartDate>
+                            <ContractPartyRoleLastUpdateDate>2011-03-21 14:52:10.0</ContractPartyRoleLastUpdateDate>
+                            <ContractPartyRoleLastUpdateUser>BATCH_MERGE</ContractPartyRoleLastUpdateUser>
+                            <ContractPartyRoleLastUpdateTxId>331130069032966270</ContractPartyRoleLastUpdateTxId>
+                            <DWLStatus>
+                                <Status>0</Status>
+                            </DWLStatus>
+                        </TCRMContractPartyRoleBObj>
+                        <TCRMContractPartyRoleBObj>
+                            <ContractRoleIdPK>2000408992</ContractRoleIdPK>
+                            <PartyId>754130069032998294</PartyId>
+                            <ContractComponentId>2140392685</ContractComponentId>
+                            <RoleType>1</RoleType>
+                            <RoleValue>投保人</RoleValue>
+                            <StartDate>2010-05-18 17:27:45.0</StartDate>
+                            <ContractPartyRoleLastUpdateDate>2011-03-21 14:52:10.0</ContractPartyRoleLastUpdateDate>
+                            <ContractPartyRoleLastUpdateUser>BATCH_MERGE</ContractPartyRoleLastUpdateUser>
+                            <ContractPartyRoleLastUpdateTxId>331130069032966270</ContractPartyRoleLastUpdateTxId>
+                            <DWLStatus>
+                                <Status>0</Status>
+                            </DWLStatus>
+                        </TCRMContractPartyRoleBObj>
+                        <TCRMAdminNativeKeyBObj>
+                            <AdminNativeKeyIdPK>1566078528</AdminNativeKeyIdPK>
+                            <AdminContractId>405535620010102</AdminContractId>
+                            <AdminFieldNameType>101</AdminFieldNameType>
+                            <AdminFieldNameValue>个险保障计划编号</AdminFieldNameValue>
+                            <AdminSystemType>101</AdminSystemType>
+                            <AdminSystemValue>个险保障计划编号</AdminSystemValue>
+                            <ContractId>2140392685</ContractId>
+                            <ContractComponentIndicator>Y</ContractComponentIndicator>
+                            <NativeKeyLastUpdateDate>2010-04-28 16:28:17.0</NativeKeyLastUpdateDate>
+                            <DWLStatus>
+                                <Status>0</Status>
+                            </DWLStatus>
+                        </TCRMAdminNativeKeyBObj>
+                        <ComponentID>1000435</ComponentID>
+                        <DWLStatus>
+                            <Status>0</Status>
+                        </DWLStatus>
+                    </TCRMContractComponentBObj>
+                    <TCRMAdminNativeKeyBObj>
+                        <AdminNativeKeyIdPK>523127062288751533</AdminNativeKeyIdPK>
+                        <AdminContractId>21100390481247081</AdminContractId>
+                        <AdminFieldNameType>5</AdminFieldNameType>
+                        <AdminFieldNameValue>帐号</AdminFieldNameValue>
+                        <AdminSystemType>5</AdminSystemType>
+                        <AdminSystemValue>TOL</AdminSystemValue>
+                        <ContractId>473127062288745882</ContractId>
+                        <ContractComponentIndicator>N</ContractComponentIndicator>
+                        <NativeKeyLastUpdateDate>2010-04-07 14:48:07.0</NativeKeyLastUpdateDate>
+                        <NativeKeyLastUpdateUser>TOLMQ</NativeKeyLastUpdateUser>
+                        <NativeKeyLastUpdateTxId>535127062288719200</NativeKeyLastUpdateTxId>
+                        <DWLStatus>
+                            <Status>0</Status>
+                        </DWLStatus>
+                    </TCRMAdminNativeKeyBObj>
+                    <TCRMAdminNativeKeyBObj>
+                        <AdminNativeKeyIdPK>1566076204</AdminNativeKeyIdPK>
+                        <AdminContractId>405535620</AdminContractId>
+                        <AdminFieldNameType>1</AdminFieldNameType>
+                        <AdminFieldNameValue>个险保单号</AdminFieldNameValue>
+                        <AdminSystemType>1</AdminSystemType>
+                        <AdminSystemValue>CSC</AdminSystemValue>
+                        <ContractId>473127062288745882</ContractId>
+                        <NativeKeyLastUpdateDate>2010-04-28 16:28:17.0</NativeKeyLastUpdateDate>
+                        <DWLStatus>
+                            <Status>0</Status>
+                        </DWLStatus>
+                    </TCRMAdminNativeKeyBObj>
+                    <ComponentID>1000266</ComponentID>
+                    <DWLStatus>
+                        <Status>0</Status>
+                    </DWLStatus>
+                </TCRMContractBObj>
+                <!-- 客户信息 -->
+                <TCRMPersonBObj>
+                    <PartyId>754130069032998294</PartyId>
+                    <DisplayName>穆杰泉</DisplayName>
+                    <PartyType>P</PartyType>
+                    <CreatedDate>2011-03-21 14:52:09.0</CreatedDate>
+                    <ClientImportanceType>15</ClientImportanceType>
+                    <ClientImportanceValue>金卡</ClientImportanceValue>
+                    <PartyLastUpdateDate>2011-03-21 14:52:09.0</PartyLastUpdateDate>
+                    <PartyLastUpdateUser>BATCH_MERGE</PartyLastUpdateUser>
+                    <PartyLastUpdateTxId>331130069032966270</PartyLastUpdateTxId>
+                    <PersonPartyId>754130069032998294</PersonPartyId>
+                    <BirthDate>1980-05-12 00:00:00.0</BirthDate>
+                    <GenderType>M</GenderType>
+                    <MaritalStatusType>1</MaritalStatusType>
+                    <MaritalStatusValue>未婚</MaritalStatusValue>
+                    <PartyActiveIndicator>Y</PartyActiveIndicator>
+                    <PersonLastUpdateDate>2011-03-21 14:52:10.0</PersonLastUpdateDate>
+                    <PersonLastUpdateUser>BI</PersonLastUpdateUser>
+                    <PersonLastUpdateTxId>331130069032966270</PersonLastUpdateTxId>
+                    <TCRMExtension>
+                        <ExtendedObject>XPersonBObjExt</ExtendedObject>
+                        <XPersonBObjExt>
+                            <XOccupationTpCdType>1</XOccupationTpCdType>
+                            <XOccupationTpCdValue>一级</XOccupationTpCdValue>
+                            <XRiskValue01>359.00</XRiskValue01>
+                            <XRiskValue02>0.40</XRiskValue02>
+                            <XRiskValue09>1.00</XRiskValue09>
+                        </XPersonBObjExt>
+                    </TCRMExtension>
+                    <TCRMPartyIdentificationBObj>
+                        <IdentificationIdPK>451130069033010192</IdentificationIdPK>
+                        <PartyId>754130069032998294</PartyId>
+                        <IdentificationType>1</IdentificationType>
+                        <IdentificationValue>身份证</IdentificationValue>
+                        <IdentificationNumber>310110198005121619</IdentificationNumber>
+                        <StartDate>2009-07-03 23:11:19.0</StartDate>
+                        <PartyIdentificationLastUpdateDate>2011-03-21 14:52:10.0</PartyIdentificationLastUpdateDate>
+                        <PartyIdentificationLastUpdateUser>BATCH_MERGE</PartyIdentificationLastUpdateUser>
+                        <PartyIdentificationLastUpdateTxId>331130069032966270</PartyIdentificationLastUpdateTxId>
+                        <DWLStatus>
+                            <Status>0</Status>
+                        </DWLStatus>
+                    </TCRMPartyIdentificationBObj>
+                    <TCRMAdminContEquivBObj>
+                        <AdminContEquivIdPK>376130069033020600</AdminContEquivIdPK>
+                        <PartyId>754130069032998294</PartyId>
+                        <AdminPartyId>395841</AdminPartyId>
+                        <AdminSystemType>5</AdminSystemType>
+                        <AdminSystemValue>TOL</AdminSystemValue>
+                        <ContEquivLastUpdateDate>2011-03-21 14:52:10.0</ContEquivLastUpdateDate>
+                        <ContEquivLastUpdateUser>BATCH_MERGE</ContEquivLastUpdateUser>
+                        <ContEquivLastUpdateTxId>331130069032966270</ContEquivLastUpdateTxId>
+                        <DWLStatus>
+                            <Status>0</Status>
+                        </DWLStatus>
+                    </TCRMAdminContEquivBObj>
+                    <TCRMAdminContEquivBObj>
+                        <AdminContEquivIdPK>211130069033021239</AdminContEquivIdPK>
+                        <PartyId>754130069032998294</PartyId>
+                        <AdminPartyId>19702070</AdminPartyId>
+                        <AdminSystemType>1</AdminSystemType>
+                        <AdminSystemValue>CSC</AdminSystemValue>
+                        <ContEquivLastUpdateDate>2011-03-21 14:52:10.0</ContEquivLastUpdateDate>
+                        <ContEquivLastUpdateUser>BATCH_MERGE</ContEquivLastUpdateUser>
+                        <ContEquivLastUpdateTxId>331130069032966270</ContEquivLastUpdateTxId>
+                        <DWLStatus>
+                            <Status>0</Status>
+                        </DWLStatus>
+                    </TCRMAdminContEquivBObj>
+                    <TCRMAdminContEquivBObj>
+                        <AdminContEquivIdPK>472130069033021722</AdminContEquivIdPK>
+                        <PartyId>754130069032998294</PartyId>
+                        <AdminPartyId>0130044870</AdminPartyId>
+                        <AdminSystemType>3</AdminSystemType>
+                        <AdminSystemValue>EBA</AdminSystemValue>
+                        <ContEquivLastUpdateDate>2011-03-21 14:52:10.0</ContEquivLastUpdateDate>
+                        <ContEquivLastUpdateUser>BATCH_MERGE</ContEquivLastUpdateUser>
+                        <ContEquivLastUpdateTxId>331130069032966270</ContEquivLastUpdateTxId>
+                        <DWLStatus>
+                            <Status>0</Status>
+                        </DWLStatus>
+                    </TCRMAdminContEquivBObj>
+                    <TCRMAdminContEquivBObj>
+                        <AdminContEquivIdPK>239130069033022153</AdminContEquivIdPK>
+                        <PartyId>754130069032998294</PartyId>
+                        <AdminPartyId>182765</AdminPartyId>
+                        <AdminSystemType>5</AdminSystemType>
+                        <AdminSystemValue>TOL</AdminSystemValue>
+                        <ContEquivLastUpdateDate>2011-03-21 14:52:10.0</ContEquivLastUpdateDate>
+                        <ContEquivLastUpdateUser>BATCH_MERGE</ContEquivLastUpdateUser>
+                        <ContEquivLastUpdateTxId>331130069032966270</ContEquivLastUpdateTxId>
+                        <DWLStatus>
+                            <Status>0</Status>
+                        </DWLStatus>
+                    </TCRMAdminContEquivBObj>
+                    <TCRMPersonNameBObj>
+                        <PersonNameIdPK>656130069033005358</PersonNameIdPK>
+                        <NameUsageType>1</NameUsageType>
+                        <NameUsageValue>法律</NameUsageValue>
+                        <LastName>穆杰泉</LastName>
+                        <StdLastName>穆杰泉</StdLastName>
+                        <PersonPartyId>754130069032998294</PersonPartyId>
+                        <StartDate>2010-07-09 21:19:14.0</StartDate>
+                        <PersonNameLastUpdateDate>2011-04-20 08:41:00.0</PersonNameLastUpdateDate>
+                        <PersonNameLastUpdateUser>CSCMC</PersonNameLastUpdateUser>
+                        <PersonNameLastUpdateTxId>349130326006031213</PersonNameLastUpdateTxId>
+                        <LastUpdatedBy>CSCMC</LastUpdatedBy>
+                        <LastUpdatedDate>2011-04-20 08:41:00.0</LastUpdatedDate>
+                        <DWLStatus>
+                            <Status>0</Status>
+                        </DWLStatus>
+                    </TCRMPersonNameBObj>
+                    <ComponentID>1000767</ComponentID>
+                    <DWLStatus>
+                        <Status>0</Status>
+                    </DWLStatus>
+                </TCRMPersonBObj>
+                <DWLStatus>
+                    <Status>0</Status>
+                </DWLStatus>
+            </TCRMFSPartyBObj>
+        </ResponseObject>
+    </TxResponse>
+</TCRMService>
