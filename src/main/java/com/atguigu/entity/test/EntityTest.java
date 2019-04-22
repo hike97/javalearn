@@ -2,6 +2,7 @@ package com.atguigu.entity.test;
 
 import com.atguigu.entity.Employee;
 
+import java.security.PublicKey;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,9 +12,15 @@ import java.util.List;
  * @desc 比较测试
  **/
 public class EntityTest {
+
+	public String testField;
+
 	public static void main (String[] args) {
 
-		List<Employee> employees = Arrays.asList (new Employee ("南风", 13), new Employee ("西风", 13), new Employee ("东风", 13), new Employee ("北京", 13));
-		employees.stream ().sorted ((e1,e2)->e2.compare (e1,e2)).forEach( System.out::println );
+//		List<Employee> employees = Arrays.asList (new Employee ("南风", 13), new Employee ("西风", 13), new Employee ("东风", 13), new Employee ("北京", 13));
+//		employees.stream ().sorted ((e1,e2)->e2.compare (e1,e2)).forEach( System.out::println );
+		EntityTest test = new EntityTest ();
+		System.out.println (test.testField);
+
 	}
 }
