@@ -1,4 +1,4 @@
-package com.java819learn.apple;
+package com.java8_19learn.entity;
 
 
 import org.junit.Test;

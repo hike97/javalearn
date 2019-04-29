@@ -1,6 +1,4 @@
-package com.java819learn.lambda;
-
-import java.util.List;
+package com.java8_19learn.lambda;
 
 /**
  * @Author hike97 許せ　サスケ　これで最後だ

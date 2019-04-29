@@ -1,4 +1,4 @@
-package com.java819learn.apple;
+package com.java8_19learn.entity;
 
 import lombok.Data;
 
@@ -9,11 +9,22 @@ import lombok.Data;
  * @Modified By:
  **/
 @Data
-public class Apple {
+public class Apple extends Fruit{
 
 	private String color;
 
 	private int weight;
+
+	public Apple () {
+	}
+
+	public Apple (int weight) {
+		this.weight = weight;
+	}
+
+	public Apple (String color) {
+		this.color = color;
+	}
 
 	public Apple (String color, int weight) {
 		this.color = color;

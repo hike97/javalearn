@@ -1,7 +1,7 @@
-package com.java819learn.prettyapple;
+package com.java8_19learn.prettyapple;
 
-import com.java819learn.apple.Apple;
-import com.java819learn.apple.AppleTest;
+import com.java8_19learn.entity.Apple;
+import com.java8_19learn.entity.AppleTest;
 
 import java.util.List;
 

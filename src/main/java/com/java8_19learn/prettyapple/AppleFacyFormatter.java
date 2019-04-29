@@ -1,6 +1,6 @@
-package com.java819learn.prettyapple;
+package com.java8_19learn.prettyapple;
 
-import com.java819learn.apple.Apple;
+import com.java8_19learn.entity.Apple;
 
 /**
  * @Author hike97 許せ　サスケ　これで最後だ
@@ -15,6 +15,6 @@ public class AppleFacyFormatter implements AppleFormatter {
 		String characteristic = apple.getWeight() > 150 ? "heavy" :
 				"light";
 		return "A " + characteristic +
-				" " + apple.getColor() +" apple";
+				" " + apple.getColor() +" entity";
 	}
 }
