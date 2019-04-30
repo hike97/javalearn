@@ -2,12 +2,10 @@ package com.java8_19learn.stream;
 
 import com.atguigu.entity.Trader;
 import com.atguigu.entity.Transaction;
-import org.graalvm.compiler.phases.common.ConditionalEliminationPhase;
 import org.junit.Test;
 
 import java.text.Collator;
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.*;
@@ -136,5 +134,7 @@ public class Reduce_map {
 			transactions.stream()
 					.map(Transaction::getValue)
 					.reduce(Integer::min);
+
+	//映射到数值流
 
 }
