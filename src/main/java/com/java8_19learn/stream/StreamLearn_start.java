@@ -68,3 +68,9 @@ public class StreamLearn_start {
 	}
 
 }
+//后端开发（dev）环境更新： 涉及模块：生存金领取方式变更
+//		负责人：卢海源
+//		--1  生存金领取方式变更校验接口  	     /survival-transfer/check
+//		--2  生存金领取方式变更选择被保人接口   /survival-transfer/select
+//		--3  生存金领取方式变更提交校验接口     /survival-transfer/preCommit
+//		--4  生存金领取方式变更提交接口         /survival-transfer/commit

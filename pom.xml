@@ -45,5 +45,11 @@
             <artifactId>activation</artifactId>
             <version>1.1.1</version>
         </dependency>
+        <!---RelectAsm-->
+        <dependency>
+            <groupId>com.esotericsoftware</groupId>
+            <artifactId>reflectasm</artifactId>
+            <version>1.11.7</version>
+        </dependency>
     </dependencies>
 </project>
