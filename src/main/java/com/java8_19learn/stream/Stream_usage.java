@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static java.util.Comparator.comparingInt;
@@ -234,7 +235,29 @@ public class Stream_usage {
 										Optional::get)));
 	}
 
+		//列出1~100之间的质数
+		@Test
+		public void test_isPrime () {
+			Map<Boolean, List<Integer>> map = partitionPrimes (100);
+			System.out.println (map);
+		}
 
+		public boolean isPrime(int candidate) {
+		 return IntStream.range (2,candidate)
+				 .noneMatch (i->candidate%i==0);
+		}
+
+		public boolean isPrimeBySqrt(int candidate) {
+			int candidateRoot = (int) Math.sqrt((double) candidate);
+			return IntStream.rangeClosed(2, candidateRoot)
+					.noneMatch(i -> candidate % i == 0);
+		}
+
+		public Map<Boolean, List<Integer>> partitionPrimes(int n) {
+			return IntStream.rangeClosed(2, n).boxed()
+					.collect(
+							partitioningBy(candidate -> isPrime(candidate)));
+		}
 
 
 
