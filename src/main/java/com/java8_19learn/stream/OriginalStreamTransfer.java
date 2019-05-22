@@ -45,4 +45,31 @@ public class OriginalStreamTransfer {
 		System.out.println ("rangeClosed闭区间计算1到100偶数个数："+count);
 		System.out.println ("range开区间计算1到100偶数个数："+count_);
 	}
+	/**
+	 * 毕达哥拉斯三元数组 勾股数
+	 * filter(b -> Math.sqrt(a*a + b*b) % 1 == 0) 判断是不是整数
+	 */
+	@Test
+	public void test_Pythagorean_triplet () {
+		Stream<int[]> pythagoreanTriples =
+				IntStream.rangeClosed (1, 100).boxed ()
+				.flatMap (
+						a -> IntStream.rangeClosed (a, 100)
+								.filter (b -> Math.sqrt (a * a + b * b) % 1 == 0)
+				.mapToObj (b ->
+						new int[]{a, b, (int) Math.sqrt (a * a + b * b)})
+				);
+		pythagoreanTriples.limit(5)
+				.forEach(t ->
+						System.out.println(t[0] + ", " + t[1] + ", " + t[2]));
+
+		//也可先产生三元数 然后筛选符合条件的：
+		Stream<double[]> pythagoreanTriples2 = IntStream.rangeClosed (1, 100).boxed ().flatMap (
+				a -> IntStream.rangeClosed (a, 100).mapToObj (
+						b -> new double[]{a, b, Math.sqrt (a * a + b * b)}
+				).filter (t -> t[2] % 1 == 0));
+
+		pythagoreanTriples2.limit (6).forEach (t ->
+				System.out.println(t[0] + ", " + t[1] + ", " + t[2]));
+	}
 }
