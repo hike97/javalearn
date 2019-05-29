@@ -99,7 +99,7 @@ public class AppleTest {
 	}
 
 	/**
-	 * lambda 表达式处理
+	 * lambda_learn 表达式处理
 	 */
 	@Test
 	public void test_04 () {

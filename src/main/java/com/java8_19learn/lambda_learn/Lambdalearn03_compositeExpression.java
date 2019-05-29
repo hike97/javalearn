@@ -1,4 +1,4 @@
-package com.java8_19learn.lambda;
+package com.java8_19learn.lambda_learn;
 
 import com.java8_19learn.entity.Apple;
 import com.java8_19learn.entity.AppleTest;

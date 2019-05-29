@@ -9,16 +9,16 @@ import java.util.function.Consumer;
  * @author hike97
  * @create 2018-09-05 19:21
  * @desc 尚硅谷视频lambda
- *  lambda 表达式的基础语法：java8中引入一个新的操作符“->” 该操作符称为箭头操作符 或lambda操作符
+ *  lambda_learn 表达式的基础语法：java8中引入一个新的操作符“->” 该操作符称为箭头操作符 或lambda操作符
  *      箭头操作符将lambda表达式拆分为 两部分
- *      左侧：lambda 表达式的参数列表
- *      右侧：lambda 表达式中所需执行的功能，即lambda 体
+ *      左侧：lambda_learn 表达式的参数列表
+ *      右侧：lambda_learn 表达式中所需执行的功能，即lambda 体
  * 口诀：
  *  上联：左右遇一括号省
  *  下联：左侧推断类型省
  *  横批：能省则省
  *
- *  二、lambda 表达式需要函数式接口的支持
+ *  二、lambda_learn 表达式需要函数式接口的支持
  *  函数式接口：只有一个抽象方法的接口，成为函数式接口
  *  可以使用@FunctionalInterface
  *  测试是不是函数式接口
@@ -26,7 +26,7 @@ import java.util.function.Consumer;
 public class TestLambda {
     /*
         语法格式一：无参数 无返回值
-        *      （）-> system.out.println("hello lambda")
+        *      （）-> system.out.println("hello lambda_learn")
      */
     @Test
     public void test_1() {

@@ -1,4 +1,4 @@
-package com.java8_19learn.lambda;
+package com.java8_19learn.lambda_learn;
 
 /**
  * @Author hike97 許せ　サスケ　これで最後だ

@@ -14,6 +14,6 @@ public class Letter {
 		return text + " Kind regards";
 	}
 	public static String checkSpelling(String text){
-		return text.replaceAll("labda", "lambda");
+		return text.replaceAll("labda", "lambda_learn");
 	}
 }
