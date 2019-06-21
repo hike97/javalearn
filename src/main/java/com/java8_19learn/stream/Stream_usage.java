@@ -191,6 +191,14 @@ public class Stream_usage {
 				groupingBy(Dish::getType, counting()));
 		System.out.println (typesCount);
 	}
+
+	@Test
+	public void test_分组之后然后取第一个 () {
+		Map<Dish.Type, Dish> collect = menu.stream ().collect (groupingBy (Dish::getType, collectingAndThen (
+				toList (), v -> v.get (0)
+		)));
+		System.out.println (collect);
+	}
 	//把收集器的结果转换为另一种类型
 	@Test
 	public void test_collectingAndThen () {
