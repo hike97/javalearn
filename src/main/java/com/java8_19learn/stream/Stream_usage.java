@@ -1,6 +1,7 @@
 package com.java8_19learn.stream;
 
 import com.java8_19learn.entity.Dish;
+import com.java8_19learn.entity.SortedDish;
 import org.junit.Test;
 
 import java.util.*;
@@ -195,8 +196,8 @@ public class Stream_usage {
 	@Test
 	public void test_分组之后然后取第一个 () {
 		Map<Dish.Type, Dish> collect = menu.stream ().collect (groupingBy (Dish::getType, collectingAndThen (
-				toList (), v -> v.get (0)
-		)));
+				toList (), v -> v.get (0))
+		));
 		System.out.println (collect);
 	}
 	//把收集器的结果转换为另一种类型
@@ -219,7 +220,7 @@ public class Stream_usage {
 								dish -> { if (dish.getCalories() <= 400) return CaloricLevel.DIET;
 								else if (dish.getCalories() <= 700) return CaloricLevel.NORMAL;
 								else return CaloricLevel.FAT; },
-								toCollection(HashSet::new) )));
+								toCollection(HashSet::new))));
 
 		System.out.println (caloricLevelsByType);
 	}

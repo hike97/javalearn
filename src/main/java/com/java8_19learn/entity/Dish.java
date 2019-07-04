@@ -2,6 +2,8 @@ package com.java8_19learn.entity;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @Author hike97 許せ　サスケ　これで最後だ
  * @Description

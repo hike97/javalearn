@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import static java.util.stream.Collectors.*;
+import static java.util.stream.Collectors.collectingAndThen;
 
 /**
  * @Author hike97 許せ　サスケ　これで最後だ
