@@ -235,6 +235,8 @@ public class Stream_usage {
 				menu.stream().collect(
 						partitioningBy(Dish::isVegetarian,
 								groupingBy(Dish::getType)));
+		Map<Dish.Type, List<Dish>> map = vegetarianDishesByType.get (true);
+		System.out.println (map);
 		//
 		Map<Boolean, Dish> mostCaloricPartitionedByVegetarian =
 				menu.stream().collect(

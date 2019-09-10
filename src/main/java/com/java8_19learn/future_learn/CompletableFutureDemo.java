@@ -2,6 +2,7 @@ package com.java8_19learn.future_learn;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.*;
@@ -78,9 +79,13 @@ public class CompletableFutureDemo {
 			Stream 的所有 CompletableFuture<Void> 对象放到一个数组中，等待所有的任务执行完成
 		 */
 		//findPricesReturnFuture ("myPhonew").map (f->f.thenAccept (System.out::println));
-		CompletableFuture[] futures = findPricesStream ("myPhonew").map (f -> f.thenAccept (System.out::println))
+		List<String> list = new ArrayList<> ();
+		CompletableFuture[] futures = findPricesStream ("myPhonew")
+				.map (f -> f.thenAccept (a->list.add (a)))
 				.toArray (size -> new CompletableFuture[size]);
 		CompletableFuture.allOf (futures).join ();//anyOf
+		System.out.println ("list:"+list);
+
 
 
 	}
