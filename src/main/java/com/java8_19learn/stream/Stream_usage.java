@@ -127,6 +127,8 @@ public class Stream_usage {
 	@Test
 	public void test_numberSquares () {
 		List<Integer> numbers = Arrays.asList (1, 2, 3, 4, 5);
+		boolean b = numbers.stream ().anyMatch (a -> false);
+		System.out.println (b);
 		List<Integer> squares =
 				numbers.stream ()
 						.map (n -> n * n)

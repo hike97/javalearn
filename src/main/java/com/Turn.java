@@ -27,12 +27,33 @@ public class Turn {
 //		LocalDateTime parse = LocalDateTime.parse (str);
 //		int hour = parse.getHour ();
 //		System.out.println (hour);
-		List<Object> list = Arrays.asList (null, null, null);
-		List<CompletableFuture<Object>> futureList = list.stream ().map (i -> CompletableFuture.completedFuture (i).thenApplyAsync (v -> v)).collect (Collectors.toList ());
-		CompletableFuture.allOf (futureList.toArray (new CompletableFuture[futureList.size ()])).join ();
-		futureList.forEach (System.out::println);
-		futureList.stream ().filter (v-> v.join ()!=null).map (CompletableFuture::join).forEach (System.out::println);
+//		List<Object> list = Arrays.asList (null, null, null);
+//		List<CompletableFuture<Object>> futureList = list.stream ().map (i -> CompletableFuture.completedFuture (i).thenApplyAsync (v -> v)).collect (Collectors.toList ());
+//		CompletableFuture.allOf (futureList.toArray (new CompletableFuture[futureList.size ()])).join ();
+//		futureList.forEach (System.out::println);
+//		futureList.stream ().filter (v-> v.join ()!=null).map (CompletableFuture::join).forEach (System.out::println);
+//		System.out.println (5.0 <=5);
+		for(int j=0; j<3; j++){
+			for (int i=0; i<3; i++){
+				if(i==1){
+					break;
+				}
 
+				System.out.print("i:"+i);
+			}
+			System.out.println("j："+j);
+		}
+		System.out.println ("continue++++++++++++++++++");
+		for(int j=0; j<3; j++){
+			for (int i=0; i<3; i++){
+				if(i==1){
+					continue;
+				}
+
+				System.out.print("i:"+i);
+			}
+			System.out.println("j："+j);
+		}
 	}
 }
 

@@ -2,6 +2,7 @@ package com.java8_19learn.time;
 
 import com.atguigu.java_collection.genericity.Array;
 import com.java8_19learn.entity.Apple;
+import com.sun.xml.ws.util.StringUtils;
 import org.junit.Test;
 
 import java.sql.Timestamp;
@@ -41,7 +42,28 @@ public class TimeDemo {
 //		boolean b = set.addAll (apples);
 //		System.out.println (set.size ());
 //		System.out.println (String.format ("%02d",Integer.valueOf ("01")));
-		System.out.println (Integer.valueOf ("001") == 1);
+//		System.out.println (Integer.valueOf ("001") == 1);
+//		LocalDate date1 = LocalDate.of (2018, 8, 1);
+//		LocalDate date2 = LocalDate.of (2018, 9, 1);
+//		System.out.println (date1.isAfter (date2));
+//		String str = "2019年9月,2019年8月，2019年7月";
+		////		String[] split = str.split (",");
+		////		System.out.println (Arrays.toString (split));
+
+		String s = LocalDate.now ().format (DateTimeFormatter.ofPattern ("yyyy年MM月dd日"));
+		//2019年10月17日
+		System.out.println (s.substring (0,8));
+		ArrayList<Object> list = new ArrayList<> ();
+		for (int i = 0; i <10 ; i++) {
+			String year = LocalDate.now ().minusYears (i).format (DateTimeFormatter.ofPattern ("yyyy年"));
+			if (i==9){
+				list.add (year+"及以前");
+			}else {
+				list.add (year);
+			}
+		}
+		list.forEach (System.out::println);
+
 	}
 
 	/**
