@@ -18,7 +18,7 @@ import static java.util.stream.Collectors.*;
  * @create 2019-04-27 15:50
  * @Modified By:
  **/
-public class Stream_usage {
+public class Stream_usage_include_groupby {
 	List<Dish> menu = Arrays.asList (
 			new Dish ("pork", false, 800, Dish.Type.MEAT),
 			new Dish ("beef", false, 700, Dish.Type.MEAT),
@@ -148,17 +148,20 @@ public class Stream_usage {
 		List<int[]> collect = number1.stream ()
 				.flatMap (i -> number2.stream ()
 						.map (j -> new int[]{i, j})).collect (toList ());
-		//		collect.stream ().forEach (System.out::println);
-		//		for (int[] ints : collect) {
-		//			System.out.println (Arrays.toString (ints));
-		//		}
+				//collect.stream ().forEach (System.out::println);
+		for (int[] ints : collect) {
+			System.out.println (Arrays.toString (ints));
+		}
+		System.out.println ("collect1 list-------------------------------");
+		List<int[]> collect1 = number1.stream ().flatMap (i -> number2.stream ().flatMap (j -> Stream.of (new int[]{i, j}))).collect (toList ());
+		collect.forEach (System.out::println);
 		/**
 		 * 再添加一个限制条件：两个数相加能够被3整除
 		 */
-		List<int[]> collect1 = number1.stream ().flatMap (i -> number2.stream ().filter (j -> (i + j) % 3 == 0).map (j -> new int[]{i, j})).collect (toList ());
-		collect1.forEach (ints -> {
-			System.out.println (Arrays.toString (ints));
-		});
+//		List<int[]> collect1 = number1.stream ().flatMap (i -> number2.stream ().filter (j -> (i + j) % 3 == 0).map (j -> new int[]{i, j})).collect (toList ());
+//		collect1.forEach (ints -> {
+//			System.out.println (Arrays.toString (ints));
+//		});
 	}
 
 	@Test //groupingby的应用
