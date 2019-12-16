@@ -35,7 +35,7 @@ public class SequenceNumber {
 		@Override
 		public void run () {
 			for (int i = 0; i <3 ; i++) {
-				System.out.println("thread["+Thread.currentThread().getName()+
+				System.out.println("thread_pool["+Thread.currentThread().getName()+
 						"] sn["+sn.getNextNum()+"]");
 			}
 		}
