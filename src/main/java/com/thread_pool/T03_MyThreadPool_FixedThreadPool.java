@@ -9,7 +9,7 @@ import java.util.concurrent.*;
  * @create 2019-12-16 14:32
  * @Modified By:
  **/
-public class T03_MyThreadPool {
+public class T03_MyThreadPool_FixedThreadPool {
 	public static void main (String[] args) throws InterruptedException, ExecutionException {
 		//futureTask 包装callable 方法
 		//FutureTask<V> implements RunnableFuture<V>

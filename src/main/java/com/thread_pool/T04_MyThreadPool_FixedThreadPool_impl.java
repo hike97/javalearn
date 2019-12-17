@@ -10,7 +10,7 @@ import java.util.concurrent.*;
  * @create 2019-12-16 16:02
  * @Modified By:
  **/
-public class T04_MyThreadPool_impl {
+public class T04_MyThreadPool_FixedThreadPool_impl {
 	public static void main (String[] args) throws ExecutionException, InterruptedException {
 		/**
 		 * 不用线程池计算
