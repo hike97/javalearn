@@ -1,7 +1,7 @@
 package com.algorithm;
 
 
-import static com.algorithm.SelectionSort.print;
+import static com.algorithm.SortUtils.print;
 
 /**
  * @Author hike97

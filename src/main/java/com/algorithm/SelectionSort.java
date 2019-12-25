@@ -1,6 +1,9 @@
 package com.algorithm;
 
 
+import static com.algorithm.SortUtils.print;
+import static com.algorithm.SortUtils.swap;
+
 /**
  * @Author hike97
  * @Description 选择排序 时间复杂度O(n²) 不稳定：两个相等的数 排序后会调换顺序
@@ -30,17 +33,5 @@ public class SelectionSort {
 		}
 		//选择排序优化
 
-	}
-	//打印数组方法
-	static void print(int [] arr ) {
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print (arr[i] + " ");
-		}
-	}
-	//交换
-	static void swap(int[]arr,int i,int j){
-		int temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
 	}
 }
