@@ -10,7 +10,7 @@ import static com.algorithm.SortUtils.print;
  **/
 public class InsectionSort {
 	public static void main (String[] args) {
-		int[] a = {9,3,1,4,6,8,7,5,2};
+		int[] a = {3,4,9,2,6,7,5,1};
 //		sort (a);
 		sort_optimize (a);
 		print(a);
@@ -31,14 +31,23 @@ public class InsectionSort {
 	static void sort_optimize(int[] a) {
 		int j=0,temp = 0;
 		//从数组第二个数开始插入（数组第一个数左边没有数）
+		int count = 0;
 		for (int i = 1; i < a.length; i++) {
-            temp = a[i];//将待插入数据取出
+			temp = a[i];//将待插入数据取出
 			j=i-1;//排好序数组的最后一个（用来和待插入数据比较的位置）
 			while (j>=0&&temp<a[j]){
+				System.out.println ("j=" + j );
+//				print (a);
+//				System.out.println ();
 				a[j+1] = a[j];
 				j--;
 			}
 			a[j+1] = temp;//将最后一个元素后一位添加为tmp对比值
+//			System.out.println ("----------------------------------第" + (++count) + "次循环result-----------------------------------------");
+//			print (a);
+//			System.out.println ();
 		}
 	}
+
+
 }
