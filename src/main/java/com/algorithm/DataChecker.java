@@ -36,7 +36,8 @@ public class DataChecker {
 //		sortV1(arr2);
 //		sortV2(arr2);
 //		bubbleSort(arr2);
-		InsectionSort.sort (arr2);
+//		InsectionSort.sort (arr2);
+		MergeSortV3.sort (arr2,0,arr2.length-1);
 		boolean same =  true;
 		for (int i = 0; i < arr2.length; i++) {
 			if (arr[i] != arr2[i]) same=false;
