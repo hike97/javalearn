@@ -21,7 +21,7 @@ public class lambdaTest01 {
 //			}
 //		});
 //		//java8 风格
-//		File[] files = new File (".").listFiles (File::isHidden);
+//		File[] utils = new File (".").listFiles (File::isHidden);
 		List<String> list = new ArrayList<> ();
 		list.add ("1");
 		list.add ("2");
