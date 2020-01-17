@@ -28,19 +28,25 @@ public class DataChecker {
 	}
 
 	static void check() {
-		int[] arr = generateRandomArray ();
-		//arr的副本arr2
-		int[] arr2 = new int[arr.length];
-		System.arraycopy (arr,0,arr2,0,arr.length);
-		Arrays.sort (arr);
-//		sortV1(arr2);
-//		sortV2(arr2);
-//		bubbleSort(arr2);
-//		InsectionSort.sort (arr2);
-		MergeSortV3.sort (arr2,0,arr2.length-1);
-		boolean same =  true;
-		for (int i = 0; i < arr2.length; i++) {
-			if (arr[i] != arr2[i]) same=false;
+		boolean same = true;
+		//增加实验次数
+		for (int time = 0; time < 1000; time++) {
+			int[] arr = generateRandomArray ();
+			//arr的副本arr2
+			int[] arr2 = new int[arr.length];
+			System.arraycopy (arr,0,arr2,0,arr.length);
+			Arrays.sort (arr);
+			//		sortV1(arr2);
+			//		sortV2(arr2);
+			//		bubbleSort(arr2);
+			//		InsectionSort.sort (arr2);
+//			MergeSortV3.sort (arr2,0,arr2.length-1);
+			QuickSortV2.sort (arr2,0,arr2.length-1);
+			same =  true;
+			for (int i = 0; i < arr2.length; i++) {
+				if (arr[i] != arr2[i]) same=false;
+			}
+
 		}
 		System.out.println (same == true ? "right" : "wrong");
 	}
