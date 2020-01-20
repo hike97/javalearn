@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 /**
  * @Author hike97
- * @Description 计数排序（不稳定版）
+ * @Description 计数排序（稳定版）
  * @create 2020-01-10 14:57
  * @Modified By:
  **/
-public class CountSortV1 {
+public class CountSortV2 {
 	/*
 	 * 算法思想
 	 * 	量大但是范围小
