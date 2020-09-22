@@ -20,6 +20,20 @@
         </plugins>
     </build>
     <dependencies>
+        <!--google包-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>16.0.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core java 模型布局-->
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.9</version>
+        </dependency>
+
         <!--lombok依赖-->
         <dependency>
             <groupId>org.projectlombok</groupId>
