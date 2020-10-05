@@ -1,6 +1,7 @@
 package com.interview.thread;
 
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author hike97 2month
@@ -16,6 +17,7 @@ public class CASDemo {
 		AtomicInteger integer = new AtomicInteger ();
 		//以integer.getAndIncrement () 方法为例 了解 CAS
 		integer.getAndIncrement ();
+		ReentrantLock lock = new ReentrantLock ();
 
 	}
 }
