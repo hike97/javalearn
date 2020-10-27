@@ -1,0 +1,11 @@
+git reset --hard HEAD^ 回退到上个版本
+
+git reset --hard HEAD~3 回退到前3次提交之前，以此类推，回退到n次提交之前
+
+git reset --hard commit_id 退到/进到 指定commit的sha码
+
+git log -3 查看前三次提交日志记录  -3以此类推可以获得任意次的提交日志记录
+
+git push origin HEAD --force
+
+ps -ef | grep redis |grep -v grep |awk '{print "kill -9 " $2}'|sh 批量杀死进程
