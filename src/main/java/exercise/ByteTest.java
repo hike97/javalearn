@@ -12,11 +12,12 @@ public class ByteTest {
 	}
 
 	public static void main (String[] args) {
-		Byte a = 127;
-		Byte b = 127;
-		add (++a);
-		System.out.print (a + " ");
-		add (b);
-		System.out.print (b + "");
+//		Byte a = 127;
+//		Byte b = 127;
+//		add (++a);
+//		System.out.print (a + " ");
+//		add (b);
+//		System.out.print (b + "");
+		System.out.println ("JyuTsu.Kirin".length ());
 	}
 }

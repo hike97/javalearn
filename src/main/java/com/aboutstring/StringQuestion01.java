@@ -1,6 +1,7 @@
 package com.aboutstring;
 
 
+import org.junit.Test;
 
 /**
  * @author hike97 2month
@@ -22,5 +23,56 @@ public class StringQuestion01 {
 //		String str1 = "str01";
 //		str2.intern();
 //		System.out.println(str2==str1);
+	}
+
+	/**
+	 * 常量与常量的拼接结果在常量池。且常量池中不会存在相同内容的常量
+	 * 只要其中一个是变量，结果就在堆中
+	 * 如果拼接的结果调用intern方法，返回值就在常量池中
+	 */
+	@Test
+	public void test_01 () {
+		String s1 = "javaEE";
+		String s2 = "hadoop";
+		String s3 = "javaEEhadoop";
+		String s4 = "javaEE" + "hadoop";
+		String s5 = s1 + "hadoop";
+		String s6 = "javaEE" + s2;
+		String s7 = s1 + s2;
+		System.out.println (s3 == s4);
+		System.out.println (s3 == s5);
+		System.out.println (s3 == s6);
+		System.out.println (s3 == s7);
+		System.out.println (s5 == s6);
+		System.out.println (s5 == s7);
+		System.out.println (s6 == s7);
+		String s8 = s5.intern (); //返回s5相等的常量池的引用
+		System.out.println (s3 == s8);
+		/*
+		 *	true
+		 *	false
+		 *	false
+		 *	false
+		 *	false
+		 *	false
+		 *	false
+		 *	true
+		 */
+	}
+
+	@Test
+	public void test_02 () {
+		String s1 = "javaEE";
+		String s3 = "javaEEhadoop";
+		String s2 = s1 +"hadoop";
+		System.out.println (s2 == s3);
+		final String s4 = "javaEE";
+		String s5 = s4+"hadoop";
+		System.out.println (s5 == s3);
+		/*
+		false
+		true
+		 */
+
 	}
 }
