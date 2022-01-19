@@ -62,13 +62,6 @@ public class StringQuestion01 {
 
 	@Test
 	public void test_02 () {
-		String s1 = "javaEE";
-		String s3 = "javaEEhadoop";
-		String s2 = s1 +"hadoop";
-		System.out.println (s2 == s3);
-		final String s4 = "javaEE";
-		String s5 = s4+"hadoop";
-		System.out.println (s5 == s3);
 		/*
 		false
 		true

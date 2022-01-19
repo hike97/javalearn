@@ -18,10 +18,10 @@ git branch 分支名，例如：git branch 2.0.1.20120806
 git checkout 分支名，例如从master切换到分支：git checkout 2.0.1.20120806
 
 3.远程分支就是本地分支push到服务器上。比如master就是一个最典型的远程分支（默认）。
-git push origin  2.0.1.20120806
+>>>>>>>>>>>>>>>>>git push origin  2.0.1.20120806
 
 4.远程分支和本地分支需要区分好，所以，在从服务器上拉取特定分支的时候，需要指定远程分支的名字。
-git checkout --track origin/ 2.0.1.20120806
+>>>>>>>>>>>>>>>>>>git checkout --track origin/ 2.0.1.20120806
 注意该命令由于带有--track参数，所以要求git1.6.4以上！ 这样git会自动切换到分支。
 
 5.提交分支数据到远程服务器
