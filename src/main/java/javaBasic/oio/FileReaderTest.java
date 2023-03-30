@@ -1,4 +1,4 @@
-package javaBasic.OIO;
+package javaBasic.oio;
 
 import org.junit.Test;
 
