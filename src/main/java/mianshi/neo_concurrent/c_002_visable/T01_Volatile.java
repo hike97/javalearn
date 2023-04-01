@@ -1,4 +1,4 @@
-package mianshi.concurrent.c_002_visable;
+package mianshi.neo_concurrent.c_002_visable;
 
 import java.util.concurrent.TimeUnit;
 

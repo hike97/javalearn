@@ -1,4 +1,4 @@
-package mianshi.concurrent.falseSharing;
+package mianshi.neo_concurrent.falseSharing;
 
 import java.util.concurrent.CountDownLatch;
 

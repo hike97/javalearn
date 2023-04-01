@@ -1,4 +1,4 @@
-package mianshi.concurrent.sourcecode;
+package mianshi.neo_concurrent.sourcecode;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

@@ -1,4 +1,4 @@
-package mianshi.concurrent.c_003_atomic;
+package mianshi.neo_concurrent.c_003_atomic;
 
 import org.openjdk.jol.info.ClassLayout;
 

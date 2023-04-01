@@ -1,4 +1,4 @@
-package mianshi.concurrent.c_001_ordering;
+package mianshi.neo_concurrent.c_001_ordering;
 
 /**
  * @ClassName T02_ThisEscapeDemo
