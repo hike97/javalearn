@@ -12,6 +12,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.util.concurrent.GlobalEventExecutor;
+import mianshi.neowebcode.netty.codec.TankMsg;
 import mianshi.neowebcode.netty.codec.TankMsgDecoder;
 
 /**
@@ -55,29 +56,8 @@ public class ChatNettyServer {
 
                                 @Override
                                 public void channelRead(ChannelHandlerContext ctx, Object msg) {
-
-
-                                    /**
-                                     * 根据客户端的退出字符进行特别处理
-                                     */
-                                    //将接收的字节转为String byteBuf 用的是直接内存 无法回收
-                                    ByteBuf buf = (ByteBuf) msg;
-                                    //生成一个可读的字节数组
-                                    byte[] bytes = new byte[buf.readableBytes()];
-                                    buf.getBytes(buf.readerIndex(), bytes);
-                                    String str = new String(bytes);
-                                    System.out.println("接收到消息：" + str);
-                                    if ("__bye__".equals(str)) {
-                                        System.out.println("client ready to quit");
-                                        clients.remove(ctx.channel());
-                                        ctx.close();
-                                        System.out.println("服务端的client大小：" + clients.size());
-                                    } else {
-                                        //所有连接的客户端都写出 也可以通过iterator
-                                        //writeAndFlush 会自动释放
-                                        clients.writeAndFlush(msg);
-                                    }
-
+                                    TankMsg tm = (TankMsg) msg;
+                                    ServerFrame.INSTANCE.updateClientMsg(tm.toString());
                                 }
 
                                 @Override

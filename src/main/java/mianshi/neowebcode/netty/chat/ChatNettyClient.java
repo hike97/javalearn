@@ -105,4 +105,8 @@ public class ChatNettyClient {
         //触发closeFuture
         channel.close();
     }
+
+    public static void main(String[] args) {
+        new ChatNettyClient().connect();
+    }
 }

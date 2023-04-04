@@ -49,7 +49,7 @@ public class ServerFrame extends Frame {
      *
      * @param str
      */
-    private void updateClientMsg(String str) {
+    void updateClientMsg(String str) {
         this.taClient.setText(taClient.getText() + str + System.getProperty("line.separator"));
     }
 
@@ -58,7 +58,7 @@ public class ServerFrame extends Frame {
      *
      * @param str
      */
-    public void updateServerMsg(String str) {
+    void updateServerMsg(String str) {
         this.taServer.setText(taServer.getText() + str + System.getProperty("line.separator"));
     }
 
