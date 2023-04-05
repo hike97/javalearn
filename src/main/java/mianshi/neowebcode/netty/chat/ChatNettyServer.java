@@ -29,7 +29,7 @@ public class ChatNettyServer {
     /**
      * server启动方法
      */
-    public static void serverStart() {
+    public  void serverStart() {
         NioEventLoopGroup bossGroup = null;
         NioEventLoopGroup workerGroup = null;
         try {
