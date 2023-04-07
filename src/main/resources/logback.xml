@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- 配置日志输出目的地 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 输出到控制台 -->
+        <encoder>
+            <!-- 将日志消息以 UTF-8 格式编码 -->
+            <charset>UTF-8</charset>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <!-- 配置日志文件输出目的地 -->
+        <file>log/output.log</file>
+        <!-- 是否自动追加日志文件 -->
+        <append>true</append>
+        <!-- 将日志消息以 UTF-8 格式编码 -->
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 配置日志根 logger -->
+    <logger name="com.example" level="info">
+        <!-- 为 com.example 包下的类指定日志级别 -->
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </logger>
+
+    <!-- 配置根 logger 的输出目的地 -->
+    <!--输出到error 以上的-->
+    <root level="trace">
+        <!-- 输出到控制台和文件中 -->
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>
