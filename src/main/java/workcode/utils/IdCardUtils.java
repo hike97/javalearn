@@ -1,4 +1,4 @@
-package workcode.Utils;
+package workcode.utils;
 
 import org.junit.Test;
 

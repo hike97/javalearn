@@ -1,6 +1,7 @@
-package mianshi.newconcurrent.base;
+package mianshi.newcode.concurrent.base;
 
-import mianshi.newconcurrent.base.democlazz.MyTask;
+
+import mianshi.newcode.concurrent.base.democlazz.MyTask;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
@@ -16,7 +17,7 @@ import java.util.concurrent.FutureTask;
  **/
 public class T02_CallableAndFutureTask {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        /*
+        /**
          * 实现Callable接口的类无法直接在new Thread中运行，而是需要使用ExecutorService或者FutureTask来执行。这是因为Callable接口
          * 与Runnable接口的执行方式不同。
          * Runnable接口的run方法没有返回值，只能通过Thread类的start方法来启动新线程并执行run方法。而Callable接口的call方法可以返回一

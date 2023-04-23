@@ -1,4 +1,4 @@
-package mianshi.interview.lock;
+package mianshi.newcode.concurrent.c_010_aqs.reentrantlock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;

@@ -1,4 +1,4 @@
-package mianshi.newconcurrent.base;
+package mianshi.newcode.concurrent.base;
 
 /**
  * @ClassName T01_JoinAndYeild

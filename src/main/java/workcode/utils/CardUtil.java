@@ -1,4 +1,4 @@
-package workcode.Utils;
+package workcode.utils;
 
 import java.util.Calendar;
 import java.util.HashMap;

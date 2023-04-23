@@ -1,4 +1,4 @@
-package mianshi.newconcurrent.base.democlazz;
+package mianshi.newcode.concurrent.base.democlazz;
 
 import java.util.concurrent.Callable;
 

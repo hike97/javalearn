@@ -1,4 +1,4 @@
-package mianshi.interview.lock;
+package mianshi.newcode.concurrent.c_010_aqs.reentrantlock;
 
 
 import mianshi.interview.utils.PoolUtils;
@@ -11,7 +11,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  * @Author hike97
  * @Description 集齐七颗龙珠 召唤神龙
  * @create 2020-09-24 10:38
- * @Modified By:
+ * @desc: cyclicBarrier 底层实现是reentrantlock
  **/
 public class CyclicBarrierDemo {
 	public static void main (String[] args) {
@@ -22,9 +22,7 @@ public class CyclicBarrierDemo {
 				System.out.println (Thread.currentThread ().getName ()+"收集到一颗龙珠~");
 				try {
 					barrier.await ();
-				} catch (InterruptedException e) {
-					e.printStackTrace ();
-				} catch (BrokenBarrierException e) {
+				} catch (InterruptedException | BrokenBarrierException e) {
 					e.printStackTrace ();
 				}
 			});

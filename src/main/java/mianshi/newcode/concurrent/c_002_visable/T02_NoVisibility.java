@@ -1,4 +1,4 @@
-package mianshi.newconcurrent.c_002_visable;
+package mianshi.newcode.concurrent.c_002_visable;
 
 /**
  * @ClassName T02_NoVisibility

@@ -1,4 +1,4 @@
-package mianshi.interview.lock;
+package mianshi.newcode.concurrent.c_010_aqs;
 
 import mianshi.interview.utils.PoolUtils;
 

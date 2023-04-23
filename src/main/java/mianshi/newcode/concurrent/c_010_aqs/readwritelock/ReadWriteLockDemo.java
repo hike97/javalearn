@@ -1,4 +1,4 @@
-package mianshi.interview.lock;
+package mianshi.newcode.concurrent.c_010_aqs.readwritelock;
 
 import java.util.HashMap;
 import java.util.Map;
