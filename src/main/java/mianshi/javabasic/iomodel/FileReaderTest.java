@@ -1,4 +1,4 @@
-package mianshi.javabasic.oio;
+package mianshi.javabasic.iomodel;
 
 import org.junit.Test;
 

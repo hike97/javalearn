@@ -1,4 +1,4 @@
-package mianshi.newwebcode.netty;
+package mianshi.newcode.webcode.netty;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
